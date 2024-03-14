@@ -1,0 +1,46 @@
+<style>
+
+* {
+
+    font-family: Arial;
+
+}
+
+</style>
+
+
+
+<h1>bismuth's web hosting service</h1>
+<title>bismuth web hosting</title>
+
+
+
+<form method="POST">
+
+    <label>page name</label><br>
+
+    <input type="text" maxlength="20" name="name"><br>
+
+    <label>html OR plaintext</label><br>
+
+    <textarea rows="7" cols="50" name="payload"></textarea><br>
+
+    <label>password (on creation, set this and save it for editing later on. websites without a password can be edited, so be careful.)</label><br>
+
+    <input type="password" name="pass"><br>
+
+    <input type="submit" value="render and host"><br>
+
+</form>
+
+
+
+<h1>pages being hosted</h1>
+
+
+
+{% for x in files %}
+
+<a href="/page?name={{x}}">{{x}}</a><br>
+
+{% endfor %}
